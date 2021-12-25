@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign_up3</title>
+</head>
+
+<form action="/add_user_cred" method="post">
+  <center>
+    <input type="hidden" name="POST" value="Employee">
+    <div>
+      <img src="/static/loger.png" alt="Avatar" class="avatar">
+    </div>
+  </center>
+    <table align="center">
+    <tr>
+      <td>
+        <input type="text" placeholder="Enter FirstName" name="fname" required style="width: 250px;">
+      </td>
+      <td>
+        <input type="text"placeholder="Enter LastName" name="lname" required style="width: 250px;">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="password"placeholder="Enter Password" name="pswt" required style="width: 250px;">
+      </td>
+      <td>
+        <input type="password" placeholder="Enter Password Again" name="psw" required style="width: 250px;">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <textarea name="Address" placeholder="Enter Address" required style="width: 400px;"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="email" name="Email" placeholder="Enter Email" style="width: 300px;">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="tel" name="PhNumber" placeholder="Enter Mo.Number" required maxlength="11">
+      </td>
+      <td>
+        <input type="tel" name="PhNumber2" placeholder="Enter recovery Number(optional)" required maxlength="11">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" placeholder="Select your gender:" required readonly style="width: 250px;">
+      </td>
+      <td>
+        <select name="Gender" class="droplist" style="width: 200px;">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Others">Others</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" readonly placeholder="Select your date of birth:">
+      </td>
+      <td>
+        <input type="date" name="DOB" required style="width: 250px;">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="Submit">Sign Up</button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="/"><button type="button" class="cancelbtn">Cancel</button></a>
+  </div>
+</form>
+
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password], input[type=date], input[type=email], input[type=tel]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.droplist{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  margin: 30px;
+  width: auto;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+.containertxt{
+  padding: 5px;
+  color: grey;
+}
+
+.container {
+  padding: 30px;
+  color: grey;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+</style>
+{% endblock %}
+
