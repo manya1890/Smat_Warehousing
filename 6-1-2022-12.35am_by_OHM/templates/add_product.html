@@ -1,0 +1,148 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>add_product</title>
+</head>
+<style>
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+    form {border: 3px solid #f1f1f1;}
+    
+    input[type=text], input[type=password], input[type=date], input[type=email], input[type=tel]{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    .droplist{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    .cancelbtn {
+      margin: 30px;
+      width: auto;
+      background-color: #f44336;
+    }
+    
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+    
+    .containertxt{
+      padding: 5px;
+      color: grey;
+    }
+    
+    .container {
+      padding: 30px;
+      color: grey;
+    }
+    
+    img.avatar {
+      width: 20%;
+      border-radius: 50%;
+    }
+    
+    
+    
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+    
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
+    }
+    
+    </style>
+
+<form action="/add_user_cred" method="post">
+  
+    <table align="center">
+    <tr>
+        <td>
+        
+            <input type="text" placeholder="Product ID" name="fname" required style="width: 250px;">
+          </td>
+      <td>
+        <input type="text" placeholder="Enter product name" name="fname" required style="width: 250px;">
+      </td>
+      <td>
+        <input type="text"placeholder="Enter Product Price" name="lname" required style="width: 250px;">
+      </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="Enter Product Weight" name="fname" required style="width: 250px;">
+          </td>
+      <td>
+        <input type="text"placeholder="Enter Product Dimensions" name="pswt" required style="width: 250px;">
+      </td>
+      <td>
+        <input type="text" placeholder="Place in warehouse(optional)" name="fname" required style="width: 250px;">
+      </td>
+    <tr>
+        <td>
+            <input type="text" placeholder="Enter Enter Product Quntity" name="fname" required style="width: 250px;">
+          </td>
+          <td>
+             Fragile 
+            <input type="radio" name="False" value="True">yes</input>
+            <input type="radio" name="False" value="False">no</input>
+          </td>
+    </tr>  
+    </tr>
+    <tr>
+        
+      <td colspan="2">
+        <textarea name="Product Discription" placeholder="Enter Product Discription" required style="width: 400px; height: 100px;"></textarea>
+      </td>
+    </tr>
+    <center>
+        <input type="image" src="#" alt="insert your image" width="250rem" height="250rem">
+    
+      </center>    
+    <tr>
+      <td colspan="2">
+        <button type="Submit">Add Product</button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="/"><button type="button" class="cancelbtn">Cancel</button></a>
+  </div>
+   
+</form>
+
+</html>
